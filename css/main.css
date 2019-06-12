@@ -1,0 +1,310 @@
+body {
+  background-color: white;
+  font-family: "roboto";
+  font-size: 14px;
+  font-style: none;
+  font-weight: 500;
+  color: black;
+  opacity: 1;
+  line-height: 24px;
+  overflow-x: hidden !important;
+  text-align: left;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "roboto";
+  font-weight: bold;
+}
+
+p {
+  opacity: 1;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  color: black;
+  opacity: 1;
+}
+
+a:hover {
+  background-color: transparent;
+}
+
+a:focus {
+  background-color: transparent;
+  outline: 0 !important;
+}
+
+section {
+  margin: 20px 20px 20px 20px;
+}
+
+.section-loader {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999999;
+}
+
+.section-loader .loader {
+  position: relative;
+  width: 200px !important;
+  height: 200px !important;
+  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+          transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}
+
+.section-loader .loader div {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: absolute;
+  border-width: 4px;
+  border-style: solid;
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-animation: loader 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+          animation: loader 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.section-loader .loader div:nth-child(1) {
+  border-color: #50504f;
+}
+
+.section-loader .loader div:nth-child(2) {
+  border-color: #717174;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+.custom-header {
+  position: fixed;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 0.5px rgba(184, 178, 178, 0.568);
+          box-shadow: 0 1px 0.5px rgba(184, 178, 178, 0.568);
+  z-index: 1030;
+}
+
+.custom-header.nav-strict {
+  background-color: white;
+  -webkit-box-shadow: 0 2px 1px rgba(88, 85, 85, 0.582);
+          box-shadow: 0 2px 1px rgba(88, 85, 85, 0.582);
+}
+
+.custom-header.nav-strict .navbar-padding {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.custom-header .navbar-padding {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.custom-header .header-shadow {
+  -webkit-box-shadow: 0 5px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5px 2px rgba(0, 0, 0, 0.25);
+}
+
+.custom-header .navbar-nav .nav-item {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.custom-header .navbar-nav .nav-item.active {
+  border-bottom: 1px solid black;
+}
+
+.custom-header .navbar-nav .nav-link {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 3px;
+}
+
+.home-img {
+  background-image: url("../images/digital_chemistry.jpg");
+  background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  background-position: center center;
+}
+
+.img-overlay {
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  background-position: center center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.home-section .home-row-padding {
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+
+.home-section .header-info h2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 65px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.home-section .header-info h4 {
+  font-size: 26px;
+  line-height: 34px;
+  margin-bottom: 30px;
+}
+
+.home-section .header-info ul {
+  margin: 0px;
+}
+
+.home-section .header-info ul li {
+  padding: 10px 0;
+}
+
+.home-section .header-info ul li .fa {
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.home-section .header-info ul li address {
+  display: inline-block;
+}
+
+.home-section .header-info .social-icon {
+  display: inline-block;
+  margin-top: 0px;
+  padding: 0;
+}
+
+.home-section .header-info .social-icon li {
+  list-style: none;
+  float: left;
+}
+
+.home-section .header-info .social-icon li a {
+  font-size: 25px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin-right: 0;
+  border-radius: 50%;
+}
+
+.home-section .header-info .social-icon li .fa {
+  font-size: 32pt;
+  line-height: 30px;
+  padding: 4px 14px;
+  margin-right: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+.home-section .promo {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.home-section .promo span {
+  background-color: #0bceaf;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+}
+
+.home-section .img-portrait img {
+  border: 20px solid rgba(0, 0, 0, 0.17);
+  border-radius: 50%;
+}
+
+.home-section .img-portrait .img-border {
+  width: 400px;
+  border: 20px solid rgba(0, 0, 0, 0.07);
+  border-radius: 50%;
+}
+
+.aboutme-section h2 {
+  text-align: center;
+}
+
+.skills-section h2 {
+  text-align: center;
+}
+
+.skills-section h4 {
+  font-size: 14pt;
+  color: rgba(27, 27, 27, 0.746);
+}
+
+.skills-section .progress {
+  border-radius: 20px;
+}
+
+.skills-section .skills-padding {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@keyframes loader {
+  0% {
+    top: 94px;
+    left: 94px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 57px;
+    left: 57px;
+    width: 74px;
+    height: 74px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    top: 94px;
+    left: 94px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 57px;
+    left: 57px;
+    width: 74px;
+    height: 74px;
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

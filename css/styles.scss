@@ -1,0 +1,2981 @@
+//colors
+$black_16: rgba(0, 0, 0, 0.16);
+$black_12: rgba(0, 0, 0, 0.12);
+$color_mountain_mist_approx: rgba(153, 153, 153, 1);
+$black: rgba(0, 0, 0, 1);
+$white: rgba(255, 255, 255, 1);
+$color_caribbean_green_approx: rgba(11, 206, 175, 1);
+$color_apple_approx: rgba(86, 204, 53, 1);
+$color_carnation_approx: rgba(255, 82, 82, 1);
+$color_picton_blue_approx: rgba(82, 184, 255, 1);
+$color_shark_approx: rgba(32, 32, 38, 1);
+$white_16: rgba(255, 255, 255, 0.16);
+$white_12: rgba(255, 255, 255, 0.12);
+$white_80: rgba(255, 255, 255, 0.8);
+$white_90: rgba(255, 255, 255, 0.9);
+$color_shark_80_approx: rgba(40, 40, 40, 0.8);
+	$color_fuscous_gray_approx: rgba(80, 80, 79, 1);
+	$color_dove_gray_approx: rgba(113, 113, 116, 1);
+$white_70: rgba(255, 255, 255, 0.7);
+$black_17: rgba(0, 0, 0, 0.17);
+$black_7: rgba(0, 0, 0, 0.07);
+$black_70: rgba(0, 0, 0, 0.7);
+$black_50: rgba(0, 0, 0, 0.5);
+$white_10: rgba(255, 255, 255, 0.1);
+$black_90: rgba(0, 0, 0, 0.9);
+$black_40: rgba(0, 0, 0, 0.4);
+$black_80: rgba(0, 0, 0, 0.8);
+$color_persian_green_approx: rgba(10, 182, 154, 1);
+$color_aquamarine_approx: rgba(122, 248, 228, 1);
+$color_caribbean_green_90_approx: rgba(11, 206, 175, 0.9);
+$color_medium_purple_approx: rgba(151, 116, 250, 1);
+$color_burnt_sienna_approx: rgba(237, 114, 86, 1);
+$color_curious_blue_approx: rgba(39, 150, 226, 1);
+
+//fonts
+$font_0: 'roboto';
+$font_1: 'sans-serif';
+
+//urls
+$url_0: url('../images/footer-bg.png');
+$url_1: url('../images/home-bg-img.jpg');
+$url_2: url('../images/extra-feature-bg.jpg');
+$url_3: url('../images/map-color-oserlay.png');
+$url_4: url('../images/header-bg-2.png');
+
+//@extend-elements
+//original selectors
+//.section-header-separator::before, .section-header-separator::after
+%extend_1 {
+	content: '';
+	position: absolute;
+	width: 57px;
+	height: 2px;
+	top: 25px;
+}
+
+//original selectors
+//.btn.apple, .btn.androad
+%extend_2 {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px !important;
+	padding: 9px 28px;
+	height: 82px;
+}
+
+//original selectors
+//.btn.apple img, .btn.androad img
+%extend_3 {
+	width: 35px;
+	height: 100%;
+	float: left;
+}
+
+//original selectors
+//.btn.apple span, .btn.androad span
+%extend_4 {
+	display: block;
+	//vendor-prefix found
+	//-webkit-transition: color 0.3s ease
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: color 0.3s ease;
+}
+
+//original selectors
+//.btn.apple .big, .btn.apple .small, .btn.androad .big, .btn.androad .small
+%extend_5 {
+	text-align: left;
+	margin-left: 7px;
+	line-height: 30px;
+}
+
+//original selectors
+//.subscription-success, .subscription-failed, .email-success, .email-failed, .email-loading
+%extend_6 {
+	font-size: 15px;
+	display: none;
+	text-align: center !important;
+	padding: 10px !important;
+}
+
+//original selectors
+//.subscription-failed .icon, .email-failed .icon
+%extend_7 {
+	font-size: 20px;
+	position: relative;
+	top: 5px;
+}
+
+//original selectors
+//.subscription-success .icon, .subscription-failed .icon, .email-success .icon, .email-failed .icon
+%extend_8 {
+	font-size: 20px;
+	position: relative;
+	top: 5px;
+}
+
+
+.section-header-separator::before {
+	@extend %extend_1;
+	left: 0;
+}
+.section-header-separator::after {
+	@extend %extend_1;
+	right: 0;
+}
+.btn {
+	//vendor-prefix found
+	//-webkit-transition: color 0.3s ease
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: color 0.3s ease;
+	padding: 8px 30px;
+	font-weight: bold;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 20px;
+	outline: 0;
+	&.apple {
+		@extend %extend_2;
+		img {
+			@extend %extend_3;
+		}
+		span {
+			@extend %extend_4;
+		}
+		.big {
+			@extend %extend_5;
+			font-size: 24px;
+			font-weight: 400;
+		}
+		.small {
+			@extend %extend_5;
+			font-size: 16px;
+		}
+		.icon {
+			font-size: 60px;
+			float: left;
+		}
+		.group {
+			float: right;
+		}
+	}
+	&.androad {
+		@extend %extend_2;
+		img {
+			@extend %extend_3;
+		}
+		span {
+			@extend %extend_4;
+		}
+		.big {
+			@extend %extend_5;
+			font-size: 24px;
+			font-weight: 400;
+		}
+		.small {
+			@extend %extend_5;
+			font-size: 16px;
+		}
+		.icon {
+			font-size: 60px;
+			float: left;
+		}
+		.group {
+			float: right;
+		}
+	}
+	&.active {
+		&.focus {
+			outline: thin dotted;
+			outline-offset: -2px;
+		}
+		&:focus {
+			outline: thin dotted;
+			outline-offset: -2px;
+		}
+	}
+	&.focus {
+		outline: thin dotted;
+		outline-offset: -2px;
+		&:active {
+			outline: thin dotted;
+			outline-offset: -2px;
+		}
+	}
+	&:focus {
+		outline: thin dotted;
+		outline-offset: -2px;
+		outline: 0;
+	}
+	&:last-child {
+		margin-right: 0 !important;
+	}
+	.icon {
+		position: relative;
+		top: 2px;
+		img {
+			position: relative;
+			top: -3px;
+			width: 14px;
+		}
+	}
+	&.btn-fill {
+		background-color: $color_caribbean_green_approx;
+		color: $white;
+	}
+	&.btn-border {
+		background-color: transparent;
+	}
+	&.white-btn-border {
+		background-color: transparent;
+		border-color: $white;
+	}
+	&.btn-round {
+		padding: 15px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		width: 65px;
+		height: 65px;
+		font-size: 24px;
+		text-align: center;
+		.icon {
+			top: 7px;
+		}
+	}
+	&:hover {
+		outline: 0;
+	}
+	&:active:focus {
+		outline: thin dotted;
+		outline-offset: -2px;
+	}
+	&.left-icon .icon {
+		margin-right: 15px;
+	}
+	&.right-icon .icon {
+		margin-left: 15px;
+	}
+}
+.subscription-success {
+	@extend %extend_6;
+	color: $color_apple_approx;
+	.icon {
+		@extend %extend_8;
+	}
+}
+.subscription-failed {
+	@extend %extend_6;
+	color: $color_carnation_approx !important;
+	.icon {
+		@extend %extend_7;
+		@extend %extend_8;
+	}
+}
+.email-success {
+	@extend %extend_6;
+	color: $color_apple_approx;
+	.icon {
+		@extend %extend_8;
+	}
+}
+.email-failed {
+	@extend %extend_6;
+	color: $color_carnation_approx !important;
+	.icon {
+		@extend %extend_7;
+		@extend %extend_8;
+	}
+}
+.email-loading {
+	@extend %extend_6;
+	color: $color_picton_blue_approx;
+	img {
+		width: 15px;
+		position: relative;
+		top: -2px;
+	}
+}
+.shadow-1 {
+	//vendor-prefix found
+	//-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 5px 0 $black_16, 0 2px 10px 0 $black_12;
+}
+html {
+	text-rendering: optimizeLegibility;
+}
+body {
+	background-color: $white;
+	font-family: $font_0, $font_1;
+	font-size: 14px;
+	font-style: none;
+	line-height: 24px;
+	font-weight: 500;
+	overflow-x: hidden !important;
+	text-align: left;
+	position: relative;
+	color: $color_mountain_mist_approx;
+	opacity: 0.9;
+	//vendor-prefix found
+	//-webkit-transition: 0.3s
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: 0.3s;
+}
+h1 {
+	font-family: $font_0, $font_1;
+	font-weight: bold;
+}
+h2 {
+	font-family: $font_0, $font_1;
+	font-weight: bold;
+}
+h3 {
+	font-family: $font_0, $font_1;
+	font-weight: bold;
+}
+h4 {
+	font-family: $font_0, $font_1;
+	font-weight: bold;
+}
+h5 {
+	font-family: $font_0, $font_1;
+	font-weight: bold;
+}
+h6 {
+	font-family: $font_0, $font_1;
+	font-weight: bold;
+}
+p {
+	opacity: 0.9;
+}
+a {
+	text-decoration: none !important;
+	cursor: pointer;
+	padding: 0;
+	background-color: transparent;
+	//vendor-prefix found
+	//-webkit-transition: color 0.3s ease
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: color 0.3s ease;
+	color: $black;
+	opacity: 0.9;
+	&:hover {
+		background-color: transparent;
+	}
+	&:focus {
+		background-color: transparent;
+		outline: 0 !important;
+	}
+}
+.center {
+	float: none;
+	margin: 0 auto;
+	text-align: center;
+}
+.overflow {
+	overflow: hidden;
+}
+.relative {
+	position: relative;
+}
+.display-table {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+.display-flex {
+	//vendor-prefix found
+	//display: -webkit-box
+	//vendor-prefix found
+	//display: -ms-flexbox
+	display: flex;
+	//vendor-prefix found
+	//-webkit-box-flex: 1
+	//vendor-prefix found
+	//-ms-flex: 1
+	flex: 1;
+}
+.vertical-middle {
+	display: table-cell;
+	float: none;
+	vertical-align: middle;
+}
+.section-video {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	min-height: 100%;
+	min-width: 100%;
+	overflow: hidden;
+	z-index: -1;
+	.bgvid {
+		position: absolute;
+		top: 0;
+		left: 0;
+		min-height: 100%;
+		min-width: 100%;
+		background-size: cover;
+	}
+}
+.section-title {
+	text-align: center;
+	h3 {
+		font-size: 30px;
+		line-height: 40px;
+		color: $white;
+		font-weight: bold;
+		margin-bottom: 60px;
+	}
+	h2 {
+		margin-bottom: 60px;
+	}
+}
+.section-heading {
+	display: block;
+	margin: 0;
+}
+.section-header {
+	margin-bottom: 100px;
+	text-align: center;
+	.sub-heading {
+		font-size: 22px;
+		line-height: 30px;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin: 0 0 10px 0;
+	}
+	&.text-left {
+		text-align: left;
+		* {
+			text-align: left;
+		}
+	}
+	&.text-right {
+		text-align: right;
+		* {
+			text-align: right;
+		}
+	}
+}
+.section-header-separator {
+	position: relative;
+	width: 145px;
+	margin: 5px auto;
+	display: inline-block;
+	.icon {
+		font-size: 48px;
+		text-align: center !important;
+	}
+}
+.v-middle {
+	//vendor-prefix found
+	//display: -webkit-box
+	//vendor-prefix found
+	//display: -ms-flexbox
+	display: flex;
+	//vendor-prefix found
+	//-webkit-box-align: center
+	//vendor-prefix found
+	//-ms-flex-align: center
+	align-items: center;
+	//vendor-prefix found
+	//-webkit-box-pack: center
+	//vendor-prefix found
+	//-ms-flex-pack: center
+	justify-content: center;
+	//vendor-prefix found
+	//-webkit-box-orient: horizontal
+	//vendor-prefix found
+	//-webkit-box-direction: normal
+	//vendor-prefix found
+	//-ms-flex-direction: row
+	flex-direction: row;
+}
+.mini-separator {
+	padding: 20px 0;
+}
+.btn-text-link {
+	padding: 50px 0 0;
+	text-align: center;
+	a {
+		margin-left: 10px;
+	}
+}
+.social-icon {
+	display: inline-block;
+	li {
+		list-style: none;
+		float: left;
+		margin-bottom: 0;
+		margin-right: 8px;
+		a {
+			text-align: center;
+			width: 45px;
+			height: 45px;
+			padding: 10px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 50%;
+		}
+		&:last-child a {
+			margin-right: 0;
+		}
+	}
+}
+ul {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style-type: none;
+	}
+}
+.content-half {
+	position: relative;
+}
+.container-half-left {
+	left: 0;
+	background-position: center right;
+}
+.container-half-right {
+	right: 0;
+	background-position: center left;
+}
+.vertical-middle-content {
+	//vendor-prefix found
+	//display: -webkit-box
+	//vendor-prefix found
+	//display: -ms-flexbox
+	display: flex;
+	//vendor-prefix found
+	//-webkit-box-align: center
+	//vendor-prefix found
+	//-ms-flex-align: center
+	align-items: center;
+	//vendor-prefix found
+	//-webkit-box-pack: center
+	//vendor-prefix found
+	//-ms-flex-pack: center
+	justify-content: center;
+	//vendor-prefix found
+	//-webkit-box-orient: horizontal
+	//vendor-prefix found
+	//-webkit-box-direction: normal
+	//vendor-prefix found
+	//-ms-flex-direction: row
+	flex-direction: row;
+}
+.bg-cover {
+	background-size: cover;
+	background-position: 50% 50%;
+	background-attachment: initial;
+	background-repeat: no-repeat;
+}
+.dark-bg {
+	background-color: $color_shark_approx;
+}
+.section-separator {
+	padding: 60px 0;
+}
+.home-section-separator {
+	padding-top: 100px;
+	padding-bottom: 200px;
+}
+.bg-black {
+	background-color: $black;
+}
+.form-control {
+	//vendor-prefix found
+	//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.16), 0 0 2px 0 rgba(255, 255, 255, 0.12)
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 2px 0 $white_16, 0 0 2px 0 $white_12;
+	background-color: transparent;
+	border-color: transparent;
+	margin-bottom: 20px;
+	height: 50px;
+	line-height: 50px;
+	padding: 20px;
+	//vendor-prefix found
+	//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+	&:focus {
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.16), 0 0 2px 0 rgba(255, 255, 255, 0.12)
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 2px 0 $white_16, 0 0 2px 0 $white_12;
+		background-color: transparent;
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+		border-color: transparent;
+	}
+}
+.p-200 {
+	padding: 0 200px;
+}
+.img-overlay {
+	background-image: $url_0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	background-position: center center;
+}
+.image-bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	background-position: center center;
+}
+.home-2-img {
+	background-image: $url_1;
+}
+.featured-img-one {
+	background-image: $url_1;
+}
+.featured-img-two {
+	background-image: $url_2;
+}
+.map-image {
+	background-image: $url_3;
+}
+.mt-30 {
+	margin-top: 30px;
+}
+button {
+	outline: 0;
+	&:hover {
+		outline: 0;
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+.round-image {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50%;
+}
+.contact-message {
+	//vendor-prefix found
+	//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+	background-color: transparent;
+	border-color: transparent;
+	margin-bottom: 20px;
+	width: 100%;
+	padding: 20px;
+	outline: 0;
+	&:focus {
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+		border-color: transparent;
+	}
+}
+.h1 {
+	font-weight: bold;
+}
+.h2 {
+	font-weight: bold;
+}
+.h3 {
+	font-weight: bold;
+}
+.h4 {
+	font-weight: bold;
+}
+.h5 {
+	font-weight: bold;
+}
+.h6 {
+	font-weight: bold;
+}
+.white-version {
+	.section-loader {
+		background: $white;
+	}
+	::-webkit-input-placeholder {
+		color: $black;
+	}
+	:-ms-input-placeholder {
+		color: $black;
+	}
+	::-ms-input-placeholder {
+		color: $black;
+	}
+	::placeholder {
+		color: $black;
+	}
+	a {
+		color: $black;
+	}
+	h2 {
+		color: $black;
+		opacity: 0.8;
+	}
+	h3 {
+		color: $black;
+		opacity: 0.8;
+	}
+	h4 {
+		color: $black;
+		opacity: 0.8;
+	}
+	h5 {
+		color: $black;
+		opacity: 0.8;
+	}
+	h6 {
+		color: $black;
+		opacity: 0.8;
+	}
+	p {
+		color: $black;
+		opacity: 0.8;
+	}
+	address {
+		color: $black;
+		opacity: 0.8;
+	}
+	span {
+		color: $black;
+		opacity: 0.8;
+	}
+	div {
+		color: $black;
+	}
+	.form-control {
+		color: $white;
+	}
+	.contact-message {
+		color: $white;
+	}
+	.nav-strict {
+		background-color: $white;
+	}
+	.img-color-overlay {
+		background-color: $white_90;
+	}
+	.dark-bg {
+		background-color: $white;
+	}
+	.mh-portfolio-modal {
+		background: $white;
+	}
+	.navbar-toggler {
+		.icon {
+			background-color: $black;
+		}
+		.icon::after {
+			background-color: $black;
+		}
+		.icon::before {
+			background-color: $black;
+		}
+	}
+	.mh-header {
+		.navbar-nav li {
+			a {
+				color: $black;
+				opacity: 0.8;
+			}
+			&.active a {
+				padding-right: 0;
+				padding-left: 0;
+				border-color: $black;
+			}
+		}
+		&.nav-3 .navbar-nav li.active a {
+			border-color: transparent;
+		}
+	}
+	h1 {
+		opacity: 0.8;
+	}
+	q {
+		opacity: 0.8;
+	}
+	.mh-footer {
+		.form-control {
+			//vendor-prefix found
+			//-webkit-box-shadow: 0 0 1px 0 rgba(40, 40, 40, 0.8), 0 0 1px 0 rgba(40, 40, 40, 0.8)
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 1px 0 $color_shark_80_approx, 0 0 1px 0 $color_shark_80_approx;
+			color: $black;
+			&:focus {
+				//vendor-prefix found
+				//-webkit-box-shadow: 0 0 1px 0 rgba(40, 40, 40, 0.8), 0 0 1px 0 rgba(40, 40, 40, 0.8)
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 0 1px 0 $color_shark_80_approx, 0 0 1px 0 $color_shark_80_approx;
+			}
+		}
+		.contact-message {
+			//vendor-prefix found
+			//-webkit-box-shadow: 0 0 1px 0 rgba(40, 40, 40, 0.8), 0 0 1px 0 rgba(40, 40, 40, 0.8)
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 1px 0 $color_shark_80_approx, 0 0 1px 0 $color_shark_80_approx;
+			color: $black;
+			&:focus {
+				//vendor-prefix found
+				//-webkit-box-shadow: 0 0 1px 0 rgba(40, 40, 40, 0.8), 0 0 1px 0 rgba(40, 40, 40, 0.8)
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 0 1px 0 $color_shark_80_approx, 0 0 1px 0 $color_shark_80_approx;
+			}
+		}
+	}
+	.mh-footer-2 {
+		.form-control {
+			//vendor-prefix found
+			//-webkit-box-shadow: 0 0 1px 0 rgba(40, 40, 40, 0.8), 0 0 1px 0 rgba(40, 40, 40, 0.8)
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 1px 0 $color_shark_80_approx, 0 0 1px 0 $color_shark_80_approx;
+			&:focus {
+				//vendor-prefix found
+				//-webkit-box-shadow: 0 0 1px 0 rgba(40, 40, 40, 0.8), 0 0 1px 0 rgba(40, 40, 40, 0.8)
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 0 1px 0 $color_shark_80_approx, 0 0 1px 0 $color_shark_80_approx;
+			}
+		}
+		.contact-message {
+			//vendor-prefix found
+			//-webkit-box-shadow: 0 0 1px 0 rgba(40, 40, 40, 0.8), 0 0 1px 0 rgba(40, 40, 40, 0.8)
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 1px 0 $color_shark_80_approx, 0 0 1px 0 $color_shark_80_approx;
+			&:focus {
+				//vendor-prefix found
+				//-webkit-box-shadow: 0 0 1px 0 rgba(40, 40, 40, 0.8), 0 0 1px 0 rgba(40, 40, 40, 0.8)
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 0 1px 0 $color_shark_80_approx, 0 0 1px 0 $color_shark_80_approx;
+			}
+		}
+	}
+	.shadow-1 {
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 10px 20px 4px #00000015
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 10px 20px 4px #00000015;
+	}
+	ul li {
+		color: $black;
+	}
+	.mh-home .mh-header-info {
+		.mh-promo span {
+			color: $white;
+		}
+		.social-icon li .fa:hover {
+			background-color: $black;
+		}
+	}
+	.mh-project-gallery .grid-item figure figcaption {
+		a {
+			color: $white;
+		}
+		.title {
+			color: $white;
+		}
+		.sub-title {
+			color: $white;
+		}
+	}
+	.page-item.active .page-link {
+		background-color: $white;
+		border-color: $white;
+		color: $color_caribbean_green_approx;
+	}
+	.mh-blog .mh-blog-item {
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 10px 20px 4px #00000015
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 10px 20px 4px #00000015;
+		.blog-inner h2 a {
+			color: $color_shark_approx;
+		}
+	}
+	.mh-pricing .mh-pricing {
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 10px 20px 4px #00000015
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 10px 20px 4px #00000015;
+	}
+	.mh-experince .mh-education-deatils .mh-education-item {
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 10px 20px 4px #00000015
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 10px 20px 4px #00000015;
+	}
+	.mh-work .mh-experience-deatils .mh-work-item {
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 10px 20px 4px #00000015
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 10px 20px 4px #00000015;
+	}
+}
+.mh-rtl {
+	text-align: right;
+	.mh-footer {
+		.form-control {
+			text-align: right;
+		}
+		.contact-message {
+			text-align: right;
+		}
+	}
+	.mh-work .mh-experience-deatils .mh-work-item .work-responsibility li .fa {
+		margin-left: 10px;
+	}
+	.mh-blog-post-info ul li strong {
+		margin-left: 6px;
+	}
+	.mh-home .mh-header-info ul li .fa {
+		margin: 0 10px;
+	}
+}
+.section-loader {
+	position: fixed;
+	//vendor-prefix found
+	//display: -webkit-box
+	//vendor-prefix found
+	//display: -ms-flexbox
+	display: flex;
+	//vendor-prefix found
+	//-webkit-box-align: center
+	//vendor-prefix found
+	//-ms-flex-align: center
+	align-items: center;
+	//vendor-prefix found
+	//-webkit-box-pack: center
+	//vendor-prefix found
+	//-ms-flex-pack: center
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	z-index: 9999999;
+	.loader {
+		position: relative;
+		width: 200px !important;
+		height: 200px !important;
+		//vendor-prefix found
+		//-webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px)
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+		div {
+			//vendor-prefix found
+			//-webkit-box-sizing: content-box
+			//Instead of the line below you could use @include box-sizing($bs)
+			box-sizing: content-box;
+			position: absolute;
+			border-width: 4px;
+			border-style: solid;
+			opacity: 1;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 50%;
+			//vendor-prefix found
+			//-webkit-animation: loader 2s cubic-bezier(0, 0.2, 0.8, 1) infinite
+			animation: loader 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+			&:nth-child(1) {
+				border-color: $color_fuscous_gray_approx;
+			}
+			&:nth-child(2) {
+				border-color: $color_dove_gray_approx;
+				//vendor-prefix found
+				//-webkit-animation-delay: -0.5s
+				animation-delay: -0.5s;
+			}
+		}
+	}
+}
+@keyframes loader {
+	0% {
+		top: 94px;
+		left: 94px;
+		width: 0;
+		height: 0;
+		opacity: 1;
+	}
+	100% {
+		top: 57px;
+		left: 57px;
+		width: 74px;
+		height: 74px;
+		opacity: 0;
+	}
+}
+@-webkit-keyframes loader {
+	0% {
+		top: 94px;
+		left: 94px;
+		width: 0;
+		height: 0;
+		opacity: 1;
+	}
+	100% {
+		top: 57px;
+		left: 57px;
+		width: 74px;
+		height: 74px;
+		opacity: 0;
+	}
+}
+.mh-nav {
+	width: 100%;
+}
+.mh-header {
+	padding: 20px 0;
+	//vendor-prefix found
+	//-webkit-transition: 0.3s
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: 0.3s;
+	&.nav-strict {
+		// padding: 15px 0;
+		//vendor-prefix found
+		//-webkit-transition: 0.3s
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.3s;
+	}
+	.navbar-nav li {
+		margin: 0 20px;
+		a {
+			border-bottom: 1px solid transparent;
+			font-weight: bold;
+			font-family: $font_0, $font_1;
+			font-size: 18px;
+			opacity: 1;
+			line-height: 30px;
+			&.nav-link {
+				padding-left: 0;
+				padding-right: 0;
+			}
+			&:hover {
+				color: $color_caribbean_green_approx;
+			}
+		}
+	}
+}
+.nav-3 {
+	.navbar-nav {
+		padding-top: 30px;
+	}
+	.navbar-dark .navbar-nav .nav-link {
+		a {
+			color: $white_70;
+		}
+		&.active a {
+			color: $white_70;
+		}
+	}
+}
+.home-padding {
+	padding: 180px 0;
+}
+.mh-home {
+	.mh-header-info {
+		padding-top: 100px;
+		.mh-promo {
+			margin-bottom: 30px;
+			span {
+				background-color: $color_caribbean_green_approx;
+				font-size: 14px;
+				line-height: 24px;
+				letter-spacing: 1px;
+				font-weight: bold;
+				padding: 10px 30px;
+				//Instead of the line below you could use @include border-top-left-radius($radius)
+				border-top-left-radius: 20px;
+				//Instead of the line below you could use @include border-top-right-radius($radius)
+				border-top-right-radius: 20px;
+				//Instead of the line below you could use @include border-bottom-right-radius($radius)
+				border-bottom-right-radius: 20px;
+				//Instead of the line below you could use @include border-bottom-left-radius($radius)
+				border-bottom-left-radius: 0;
+			}
+		}
+		h2 {
+			font-size: 60px;
+			font-weight: 600;
+			line-height: 65px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		h4 {
+			font-size: 26px;
+			line-height: 34px;
+			margin-bottom: 30px;
+		}
+		ul {
+			margin-top: 20px;
+			li {
+				margin: 10px 0;
+				.fa {
+					margin-right: 15px;
+					display: inline-block;
+				}
+				address {
+					display: inline-block;
+				}
+				&:hover .fa {
+					color: $color_caribbean_green_approx;
+				}
+			}
+		}
+		.social-icon {
+			margin-top: 0;
+			li {
+				.fa {
+					font-size: 18px;
+					line-height: 30px;
+					padding: 4px 14px;
+					margin-right: 10px;
+					//vendor-prefix found
+					//-webkit-transition: 0.3s
+					//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+					transition: 0.3s;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 3px;
+					&:hover {
+						//vendor-prefix found
+						//-webkit-transition: 0.3s
+						//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+						transition: 0.3s;
+					}
+				}
+				a {
+					font-size: 25px;
+					text-align: center;
+					width: 30px;
+					height: 30px;
+					padding: 0;
+					margin-right: 0;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+	.hero-img {
+		margin: 0 auto;
+		float: none;
+		margin-top: 30px;
+		text-align: center;
+		img {
+			margin: 0 auto;
+			float: none;
+			text-align: center;
+			border: 20px solid $black_17;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 50%;
+		}
+	}
+	.img-border {
+		height: 400px;
+		width: 400px;
+		border: 20px solid $black_7;
+		margin: 0 auto;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+	}
+}
+.mh-single-project-slide-by-side {
+	margin: 0 auto;
+	.owl-next {
+		position: absolute;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		top: 48%;
+		height: 50px;
+		width: 50px;
+		right: -10%;
+		.fa {
+			font-size: 40px;
+			margin-left: 15px;
+		}
+	}
+	.owl-prev {
+		position: absolute;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		top: 48%;
+		left: -10%;
+		height: 50px;
+		width: 50px;
+		.fa {
+			font-size: 40px;
+			margin-left: 10px;
+		}
+	}
+}
+.mh-about-tag {
+	//Instead of the line below you could use @include word-break($value)
+	word-break: break-all;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	ul li {
+		margin: 0 6px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+		margin-bottom: 10px;
+		padding: 4px 0;
+		display: inline-block;
+		span {
+			border: 1px solid $color_caribbean_green_approx;
+			padding: 4px 10px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 4px;
+			&:hover {
+				background-color: transparent !important;
+			}
+		}
+	}
+}
+.mh-professional-skills {
+	padding-left: 20%;
+	h3 {
+		font-size: 30px;
+		line-height: 40px;
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 60px;
+	}
+}
+.mh-progress {
+	margin-bottom: 10px;
+	font: 900 1.1428571429em/1 Cinzel, cursive;
+	.progressbar-text {
+		color: inherit !important;
+	}
+	&.mh-progress-circle {
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+	}
+	path {
+		&:nth-child(1) {
+			stroke: $black_70;
+		}
+		&:nth-child(2) {
+			stroke: $color_caribbean_green_approx;
+		}
+	}
+}
+.candidatos {
+	position: relative;
+	margin-bottom: 15px;
+	.parcial {
+		display: inline-block;
+		width: 100%;
+		vertical-align: middle;
+		.info {
+			position: relative;
+			.nome {
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 15px;
+				font-weight: 600;
+				opacity: 0.9;
+			}
+			.eleito {
+				padding: 0 5px 2px;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 2px;
+			}
+			.segundo-turno {
+				padding: 0 5px 2px;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 2px;
+			}
+			.percentagem-num {
+				position: absolute;
+				top: 0;
+				right: 0;
+				font-size: 14px;
+				font-weight: normal;
+			}
+		}
+		.progressBar {
+			position: relative;
+			width: 100%;
+			height: 7px;
+			margin: 30px 0 2px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 10px;
+			background: $black_50;
+		}
+		.percentagem {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 7px;
+			//Instead of the line below you could use @include border-top-left-radius($radius)
+			border-top-left-radius: 10px;
+			//Instead of the line below you could use @include border-bottom-left-radius($radius)
+			border-bottom-left-radius: 10px;
+			//Instead of the line below you could use @include border-top-right-radius($radius)
+			border-top-right-radius: 10px;
+			//Instead of the line below you could use @include border-bottom-right-radius($radius)
+			border-bottom-right-radius: 10px;
+			background: $color_caribbean_green_approx;
+		}
+		.partidas {
+			font-size: 10px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+}
+.percentual {
+	//vendor-prefix found
+	//-webkit-animation-name: animationProgress
+	animation-name: animationProgress;
+}
+@-webkit-keyframes animationProgress {
+	from {
+		width: 0;
+	}
+}
+@keyframes animationProgress {
+	from {
+		width: 0;
+	}
+}
+.mh-experince {
+	h3 {
+		font-size: 30px;
+		line-height: 40px;
+		font-weight: bold;
+		margin-bottom: 60px;
+	}
+	.mh-education-deatils .mh-education-item {
+		margin-bottom: 30px;
+		padding: 26px 30px;
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 5px 0 $black_16, 0 2px 10px 0 $black_12;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		h4 {
+			font-size: 20px;
+			line-height: 30px;
+			font-weight: 600;
+			a {
+				font-style: italic;
+				margin-left: 4px;
+				color: $color_caribbean_green_approx;
+			}
+		}
+		.mh-eduyear {
+			margin: 10px 0;
+			color: $color_caribbean_green_approx;
+		}
+		p {
+			font-size: 14px;
+			line-height: 23px;
+			margin-bottom: 0;
+		}
+	}
+}
+.mh-education {
+	padding-right: 30px;
+}
+.mh-work {
+	padding-left: 30px;
+	h3 {
+		font-size: 30px;
+		line-height: 40px;
+		font-weight: bold;
+		margin-bottom: 60px;
+	}
+	.mh-experience-deatils .mh-work-item {
+		margin-bottom: 30px;
+		padding: 20px 30px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 5px 0 $black_16, 0 2px 10px 0 $black_12;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		h4 {
+			font-size: 20px;
+			line-height: 30px;
+			font-weight: 600;
+			a {
+				color: $color_caribbean_green_approx;
+			}
+		}
+		.mh-eduyear {
+			margin: 10px 0;
+			color: $color_caribbean_green_approx;
+		}
+		span {
+			font-size: 12px;
+			line-height: 22px;
+		}
+		.work-responsibility li {
+			font-size: 14px;
+			line-height: 23px;
+			margin: 2px 0;
+			.fa {
+				font-size: 10px;
+				line-height: 23px;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+.portfolio-nav {
+	margin: 0 auto;
+	margin-bottom: 40px;
+	text-align: center;
+	margin-bottom: 50px;
+	ul {
+		margin: 0 auto;
+		float: none;
+		text-align: center;
+		li {
+			margin: 0 10px;
+			display: inline-block;
+			margin: 0 20px;
+			cursor: pointer;
+			&:hover {
+				color: $color_caribbean_green_approx;
+			}
+			&.active {
+				color: $color_caribbean_green_approx;
+			}
+			span {
+				padding: 15px 0;
+				border-bottom: 2px solid transparent;
+			}
+			&.current span {
+				border-bottom: 2px solid $color_caribbean_green_approx;
+			}
+		}
+	}
+}
+.mh-portfolio-modal {
+	display: none;
+	background: $color_shark_approx;
+}
+.mh-portfolio-modal-inner {
+	max-height: 500px;
+	overflow-y: scroll;
+	margin-right: 20px;
+	h2 {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+}
+.mh-portfolio-modal-inner::-webkit-scrollbar-track {
+	border: 1px solid $black;
+	padding: 2px 0;
+	background-color: $white;
+}
+.mh-portfolio-modal-inner::-webkit-scrollbar {
+	width: 10px;
+}
+.mh-portfolio-modal-inner::-webkit-scrollbar-thumb {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 10px;
+	//vendor-prefix found
+	//-webkit-box-shadow: inset 0 0 10px #000
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 0 10px $black;
+}
+.mix {
+	display: none;
+}
+.mh-testimonial {
+	.mh-client-item {
+		margin: 0 auto;
+		float: none;
+		text-align: center;
+		padding: 30px;
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 5px 0 $black_16, 0 2px 10px 0 $black_12;
+		img {
+			width: inherit;
+			float: none;
+			border: 5px solid $color_caribbean_green_approx;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 50%;
+		}
+		p {
+			margin: 10px 0;
+		}
+		p::before {
+			content: open-quote;
+			margin-right: 6px;
+			font-size: 20px;
+		}
+		p::after {
+			content: close-quote;
+			margin-left: 6px;
+			font-size: 20px;
+		}
+		h4 {
+			font-size: 16px;
+			line-height: 25px;
+			margin-top: 30px;
+			margin-bottom: 0;
+		}
+		span {
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+	.each-client-item {
+		margin: 30px 20px;
+	}
+	.owl-controls {
+		.owl-nav {
+			display: none !important;
+		}
+		.owl-dots {
+			padding-left: 15px;
+			margin-top: 30px;
+			text-align: center;
+			.owl-dot {
+				height: 15px;
+				width: 15px;
+				border: 1px solid $color_caribbean_green_approx;
+				display: inline-block;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 50%;
+				margin-right: 10px;
+				&.active {
+					background-color: $color_caribbean_green_approx;
+				}
+			}
+		}
+	}
+	&.mh-single-testimonial .mh-client-item p {
+		padding: 0 160px;
+		margin: 60px 0;
+	}
+	&.mh-2-testimonial .mh-client-item p {
+		padding: 0;
+		margin: 20px 0;
+	}
+}
+.mh-footer {
+	::-webkit-input-placeholder {
+		opacity: 0.9;
+	}
+	:-ms-input-placeholder {
+		opacity: 0.9;
+	}
+	::-ms-input-placeholder {
+		opacity: 0.9;
+	}
+	::placeholder {
+		opacity: 0.9;
+	}
+	.form-control {
+		padding: 20px;
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+		&:focus {
+			//vendor-prefix found
+			//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+			border-color: transparent;
+		}
+	}
+	.contact-message {
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+		background-color: transparent;
+		border-color: transparent;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+		margin-bottom: 20px;
+		width: 100%;
+		padding: 20px;
+		outline: 0;
+		&:focus {
+			//vendor-prefix found
+			//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+			border-color: transparent;
+		}
+	}
+}
+.mh-map {
+	padding: 0;
+	margin-top: 10px;
+	#mh-map {
+		height: 400px;
+		width: 100%;
+	}
+}
+.mh-footer-address {
+	margin-bottom: 60px;
+	.mh-address-footer-item {
+		padding: 30px;
+		text-align: center;
+		margin-bottom: 30px;
+		h4 {
+			margin-bottom: 20px;
+		}
+		address {
+			margin-bottom: 0;
+		}
+		.each-icon {
+			margin-bottom: 30px;
+			.fa {
+				text-align: center;
+				width: 100px;
+				height: 100px;
+				border: 1px solid;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 50%;
+				line-height: 100px;
+				font-size: 20px;
+				border-color: $color_caribbean_green_approx;
+			}
+		}
+	}
+}
+.mh-page-title {
+	padding-top: 100px;
+	h2 {
+		font-size: 40px;
+		line-height: 46px;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+}
+.nav-strict {
+	z-index: 99;
+	//vendor-prefix found
+	//-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 5px 0 $black_16, 0 2px 10px 0 $black_12;
+}
+.mh-fixed-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.mh-footer-2 {
+	.form-control {
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+		background-color: transparent;
+		border-color: transparent;
+		margin-bottom: 20px;
+		height: 50px;
+		line-height: 50px;
+		&:focus {
+			//vendor-prefix found
+			//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+			background-color: transparent;
+		}
+	}
+	.contact-message {
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+		&:focus {
+			//vendor-prefix found
+			//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+			background-color: transparent;
+		}
+	}
+}
+.mh-copyright {
+	margin-top: 60px;
+}
+.mh-footer-3 {
+	.form-control {
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+		background-color: transparent;
+		border-color: transparent;
+		margin-bottom: 20px;
+		height: 50px;
+		line-height: 50px;
+		&:focus {
+			//vendor-prefix found
+			//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+			background-color: transparent;
+		}
+	}
+	.contact-message {
+		//vendor-prefix found
+		//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+		&:focus {
+			//vendor-prefix found
+			//-webkit-box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.8)
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 2px 0 $white_80, 0 0 1px 1px $white_80;
+			background-color: transparent;
+		}
+	}
+	.mh-footer-address .mh-address-footer-item {
+		padding: 10px 30px;
+		text-align: center;
+		margin-bottom: 15px;
+		h4 {
+			margin-bottom: 10px;
+			margin-top: 10px;
+		}
+		.each-info {
+			padding-left: 40px;
+			text-align: left;
+		}
+	}
+}
+.old {
+	.navbar-collapse {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		width: 320px;
+		left: 0;
+		z-index: 990;
+		margin-top: 0;
+		padding: 0;
+		background-color: $color_caribbean_green_approx;
+		//vendor-prefix found
+		//-webkit-transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1)
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
+		//vendor-prefix found
+		//-webkit-transition: all 0.4s ease-out
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.4s ease-out;
+		overflow-y: none;
+		&.show {
+			//vendor-prefix found
+			//-webkit-transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(1)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(1);
+		}
+		.nav {
+			margin-top: 75px;
+			border-top: 1px solid;
+			border-top-color: $white_10;
+			padding: 20px;
+			li {
+				text-align: center;
+				margin-bottom: 0;
+				width: 100%;
+				display: block;
+				//vendor-prefix found
+				//-webkit-transition: all 0.4s ease-out
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all 0.4s ease-out;
+				//vendor-prefix found
+				//-webkit-transform: translate3d(-20px, -10px, 0)
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(-20px, -10px, 0);
+				a {
+					background-color: transparent;
+					text-transform: uppercase;
+					font-size: 17px;
+					line-height: 26px;
+					&:hover {
+						color: $white !important;
+						background: transparent;
+					}
+					&.active {
+						color: $white;
+					}
+				}
+				&.active {
+					color: $white;
+				}
+			}
+		}
+		&.active {
+			//vendor-prefix found
+			//-webkit-transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(1)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(1);
+		}
+	}
+	.collapse {
+		display: block;
+		&.in {
+			background-color: $black_90;
+		}
+	}
+	.navbar-header {
+		position: fixed;
+		z-index: 999;
+		width: 100%;
+		margin-top: 0;
+		left: 0;
+		.navbar-toggler {
+			.icon-bar {
+				background-color: $color_caribbean_green_approx;
+				//vendor-prefix found
+				//-webkit-transition: all 0.4s ease-out
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all 0.4s ease-out;
+			}
+			&.active .icon-bar {
+				background-color: $white;
+			}
+		}
+	}
+	.navbar-toggler {
+		padding: 15px;
+		margin-right: 15px;
+		margin-left: 20%;
+		margin-top: 15px;
+		z-index: 1000;
+		//vendor-prefix found
+		//-webkit-transition: all 0.4s ease-out
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.4s ease-out;
+		display: block;
+		.icon {
+			//vendor-prefix found
+			//-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) rotate(0deg) scale(1)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(-50%) translateY(-50%) translateZ(0) rotate(0deg) scale(1);
+			width: 22px;
+			height: 2px;
+			position: absolute;
+			background-color: $white;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 2px;
+			//vendor-prefix found
+			//-webkit-backface-visibility: hidden
+			//Instead of the line below you could use @include backface-visibility($visibility)
+			backface-visibility: hidden;
+		}
+		.icon::after {
+			width: 22px;
+			height: 2px;
+			position: absolute;
+			background-color: $white;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 2px;
+			//vendor-prefix found
+			//-webkit-backface-visibility: hidden
+			//Instead of the line below you could use @include backface-visibility($visibility)
+			backface-visibility: hidden;
+			content: '';
+			top: 0;
+			right: 0;
+			//vendor-prefix found
+			//-webkit-transition: all 0.6s ease-out
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.6s ease-out;
+			//vendor-prefix found
+			//-webkit-transform: translateX(0) translateY(6px) translateZ(0) rotate(0deg) scale(1)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(0) translateY(6px) translateZ(0) rotate(0deg) scale(1);
+		}
+		.icon::before {
+			width: 22px;
+			height: 2px;
+			position: absolute;
+			background-color: $white;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 2px;
+			//vendor-prefix found
+			//-webkit-backface-visibility: hidden
+			//Instead of the line below you could use @include backface-visibility($visibility)
+			backface-visibility: hidden;
+			content: '';
+			top: 0;
+			right: 0;
+			//vendor-prefix found
+			//-webkit-transition: all 0.6s ease-out
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.6s ease-out;
+			//vendor-prefix found
+			//-webkit-transform: translateX(0) translateY(-6px) translateZ(0) rotate(0deg) scale(1)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(0) translateY(-6px) translateZ(0) rotate(0deg) scale(1);
+		}
+		&.active {
+			.icon::after {
+				//vendor-prefix found
+				//-webkit-transform: translateX(0) translateY(0) translateZ(0) rotate(138deg) scale(1)
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateX(0) translateY(0) translateZ(0) rotate(138deg) scale(1);
+				background-color: $white;
+			}
+			.icon::before {
+				//vendor-prefix found
+				//-webkit-transform: translateX(0) translateY(0) translateZ(0) rotate(-135deg) scale(1)
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateX(0) translateY(0) translateZ(0) rotate(-135deg) scale(1);
+				background-color: $white;
+			}
+			.icon {
+				background-color: transparent;
+			}
+		}
+		&:focus {
+			outline: 0 !important;
+		}
+	}
+	.strict {
+		background-color: $black_90;
+		padding-bottom: 65px;
+	}
+	.overlay {
+		position: fixed;
+		display: none;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $black_40;
+		z-index: 3;
+		&.active {
+			display: block;
+		}
+	}
+	.navbar-dark {
+		.navbar-toggler {
+			border-color: transparent;
+		}
+		.navbar-toggler-icon {
+			background-image: inherit;
+		}
+	}
+	.navbar-fixed-bottom .navbar-collapse {
+		max-height: inherit;
+	}
+	.navbar-fixed-top .navbar-collapse {
+		max-height: inherit;
+	}
+}
+.new {
+	z-index: 99;
+	.navbar-collapse {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		width: 320px;
+		left: 0;
+		z-index: 990;
+		margin-top: 0;
+		padding: 0;
+		background-color: $color_caribbean_green_approx;
+		//vendor-prefix found
+		//-webkit-transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1)
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
+		//vendor-prefix found
+		//-webkit-transition: all 0.4s ease-out
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.4s ease-out;
+		overflow-y: none;
+		&.active {
+			//vendor-prefix found
+			//-webkit-transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(1)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(1);
+		}
+		.nav {
+			margin-top: 75px;
+			border-top: 1px solid;
+			border-top-color: $white_10;
+			padding: 20px;
+			li {
+				text-align: center;
+				margin-bottom: 0;
+				width: 100%;
+				display: block;
+				//vendor-prefix found
+				//-webkit-transition: all 0.4s ease-out
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all 0.4s ease-out;
+				//vendor-prefix found
+				//-webkit-transform: translate3d(-20px, -10px, 0)
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(-20px, -10px, 0);
+				a {
+					background-color: transparent;
+					text-transform: uppercase;
+					font-size: 17px;
+					line-height: 26px;
+					&:hover {
+						color: $white !important;
+						background: transparent;
+					}
+					&.active {
+						color: $white;
+					}
+				}
+				&.active {
+					color: $white;
+				}
+			}
+		}
+	}
+	.collapse {
+		display: block;
+		&.in {
+			background-color: $black_90;
+		}
+	}
+	.navbar-header {
+		position: fixed;
+		z-index: 999;
+		width: 100%;
+		margin-top: 0;
+		left: 0;
+		.navbar-toggler {
+			.icon-bar {
+				background-color: $color_caribbean_green_approx;
+				//vendor-prefix found
+				//-webkit-transition: all 0.4s ease-out
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all 0.4s ease-out;
+			}
+			&.active .icon-bar {
+				background-color: $white;
+			}
+		}
+	}
+	.navbar-toggler {
+		padding: 15px;
+		margin-right: 15px;
+		margin-left: 20%;
+		margin-top: 15px;
+		z-index: 1000;
+		//vendor-prefix found
+		//-webkit-transition: all 0.4s ease-out
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.4s ease-out;
+		display: block;
+		.icon {
+			//vendor-prefix found
+			//-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) rotate(0deg) scale(1)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(-50%) translateY(-50%) translateZ(0) rotate(0deg) scale(1);
+			width: 22px;
+			height: 2px;
+			position: absolute;
+			background-color: $white;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 2px;
+			//vendor-prefix found
+			//-webkit-backface-visibility: hidden
+			//Instead of the line below you could use @include backface-visibility($visibility)
+			backface-visibility: hidden;
+		}
+		.icon::after {
+			width: 22px;
+			height: 2px;
+			position: absolute;
+			background-color: $white;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 2px;
+			//vendor-prefix found
+			//-webkit-backface-visibility: hidden
+			//Instead of the line below you could use @include backface-visibility($visibility)
+			backface-visibility: hidden;
+			content: '';
+			top: 0;
+			right: 0;
+			//vendor-prefix found
+			//-webkit-transition: all 0.6s ease-out
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.6s ease-out;
+			//vendor-prefix found
+			//-webkit-transform: translateX(0) translateY(6px) translateZ(0) rotate(0deg) scale(1)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(0) translateY(6px) translateZ(0) rotate(0deg) scale(1);
+		}
+		.icon::before {
+			width: 22px;
+			height: 2px;
+			position: absolute;
+			background-color: $white;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 2px;
+			//vendor-prefix found
+			//-webkit-backface-visibility: hidden
+			//Instead of the line below you could use @include backface-visibility($visibility)
+			backface-visibility: hidden;
+			content: '';
+			top: 0;
+			right: 0;
+			//vendor-prefix found
+			//-webkit-transition: all 0.6s ease-out
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.6s ease-out;
+			//vendor-prefix found
+			//-webkit-transform: translateX(0) translateY(-6px) translateZ(0) rotate(0deg) scale(1)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(0) translateY(-6px) translateZ(0) rotate(0deg) scale(1);
+		}
+		&.active {
+			.icon::after {
+				//vendor-prefix found
+				//-webkit-transform: translateX(0) translateY(0) translateZ(0) rotate(138deg) scale(1)
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateX(0) translateY(0) translateZ(0) rotate(138deg) scale(1);
+				background-color: $white;
+			}
+			.icon::before {
+				//vendor-prefix found
+				//-webkit-transform: translateX(0) translateY(0) translateZ(0) rotate(-135deg) scale(1)
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateX(0) translateY(0) translateZ(0) rotate(-135deg) scale(1);
+				background-color: $white;
+			}
+			.icon {
+				background-color: transparent;
+			}
+		}
+		&:focus {
+			outline: 0 !important;
+		}
+	}
+	.strict {
+		background-color: $black_90;
+		padding-bottom: 65px;
+	}
+	.overlay {
+		position: fixed;
+		display: none;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $black_80;
+		z-index: 3;
+		&.active {
+			display: block;
+		}
+	}
+	.navbar-dark {
+		.navbar-toggler {
+			border-color: transparent;
+		}
+		.navbar-toggler-icon {
+			background-image: inherit;
+		}
+	}
+	.nav-btn .navbar-toggler.active {
+		display: none;
+	}
+	.navbar-fixed-bottom .navbar-collapse {
+		max-height: inherit;
+	}
+	.navbar-fixed-top .navbar-collapse {
+		max-height: inherit;
+	}
+}
+.grid-item {
+	margin-bottom: 20px;
+}
+.home-ov-img {
+	background-image: $url_4;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	background-position: center center;
+}
+.mh-pagination {
+	margin: 40px 0;
+	.page-link {
+		position: relative;
+		display: block;
+		padding: 12px 16px;
+		margin-left: -1px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		line-height: 14px;
+		background-color: transparent;
+		border: 1px solid $white;
+		font-weight: bold;
+		&:hover {
+			color: $color_caribbean_green_approx;
+		}
+	}
+	.page-item {
+		&:last-child .page-link {
+			//Instead of the line below you could use @include border-top-right-radius($radius)
+			border-top-right-radius: 50%;
+			//Instead of the line below you could use @include border-bottom-right-radius($radius)
+			border-bottom-right-radius: 50%;
+		}
+		&:first-child .page-link {
+			margin-left: 0;
+			//Instead of the line below you could use @include border-top-left-radius($radius)
+			border-top-left-radius: 50%;
+			//Instead of the line below you could use @include border-bottom-left-radius($radius)
+			border-bottom-left-radius: 50%;
+		}
+	}
+	ul li {
+		margin: 0 10px;
+	}
+}
+.mh-blog-sidebar {
+	padding: 0 20px;
+}
+.sidebar-item {
+	//vendor-prefix found
+	//-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 5px 0 $black_16, 0 2px 10px 0 $black_12;
+	margin-bottom: 30px;
+	padding: 20px 10px;
+	h3 {
+		font-size: 24px;
+		line-height: 30px;
+		margin-bottom: 10px;
+	}
+}
+.mh-author-info {
+	text-align: center;
+	h2 {
+		font-size: 24px;
+		line-height: 34px;
+		margin: 0;
+	}
+	h4 {
+		font-size: 14px;
+		margin: 0;
+		line-height: 24px;
+		font-weight: normal;
+		margin-bottom: 10px;
+	}
+	.mh-author-img {
+		margin: 0 auto;
+		margin-bottom: 10px;
+		float: none;
+		text-align: center;
+		img {
+			margin: 0 auto;
+			text-align: center;
+			border: 10px solid $black_17;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 50%;
+		}
+	}
+	.img-border {
+		height: 130px;
+		width: 130px;
+		border: 10px solid $black_7;
+		margin: 0 auto;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+	}
+	.social-icon li a:hover {
+		color: $color_caribbean_green_approx;
+	}
+}
+.mh-blog-category {
+	h4 {
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	ul li {
+		display: block;
+		margin: 2px 0;
+		a:hover {
+			color: $color_caribbean_green_approx;
+		}
+	}
+}
+.mh-blog-post-info {
+	margin-bottom: 10px;
+	ul li {
+		display: inline-block;
+		margin: 0 6px;
+		margin-left: 0;
+		strong {
+			margin-right: 6px;
+		}
+	}
+}
+.shadow-one {
+	//vendor-prefix found
+	//-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 5px 0 $black_16, 0 2px 10px 0 $black_12;
+}
+.mh-related-post {
+	padding: 30px;
+	//vendor-prefix found
+	//-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 5px 0 $black_16, 0 2px 10px 0 $black_12;
+	margin: 0;
+	margin-bottom: 30px;
+}
+.blog-form-inner {
+	//vendor-prefix found
+	//-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 5px 0 $black_16, 0 2px 10px 0 $black_12;
+	padding: 30px;
+	h3 {
+		margin-top: 0;
+		margin-bottom: 20px;
+		font-size: 26px;
+		line-height: 34px;
+	}
+}
+.comments {
+	margin-top: 20px;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.single-comment {
+	overflow: hidden;
+	margin-top: 30px;
+	//vendor-prefix found
+	//-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 5px 0 $black_16, 0 2px 10px 0 $black_12;
+}
+.post-comment {
+	margin-top: 30px;
+	padding: 30px;
+}
+#msgSubmit {
+	margin-top: 20px;
+	font-size: 22px;
+	line-height: 30px;
+	margin-bottom: 30px;
+}
+.nav li a {
+	text-decoration: none !important;
+	display: inline-block;
+	cursor: pointer;
+	padding: 0;
+	background-color: transparent;
+	//vendor-prefix found
+	//-webkit-transition: color 0.3s ease
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: color 0.3s ease;
+	&:hover {
+		background-color: transparent;
+	}
+	&:focus {
+		background-color: transparent;
+		outline: 0 !important;
+	}
+}
+.body-video-bg > .section-video {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.mh-home-2 .mh-header-info {
+	text-align: center;
+	padding-top: 100px;
+	.hero-img {
+		margin-bottom: 30px;
+		img {
+			border: 0 solid $white;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 50%;
+		}
+	}
+	h2 {
+		font-size: 50px;
+		font-weight: 600;
+		line-height: 60px;
+		margin-top: 10px;
+		margin-bottom: 0;
+		opacity: 0.9;
+	}
+	h4 {
+		font-size: 18px;
+		line-height: 30px;
+		margin-bottom: 20px;
+		opacity: 0.9;
+	}
+	p {
+		padding: 0 120px;
+		font-weight: 300;
+	}
+	ul {
+		li {
+			margin: 10px 6px;
+		}
+		&.mh-home-contact {
+			margin-bottom: 15px;
+			li {
+				display: inline-block;
+				margin: 10px 15px;
+				.fa {
+					margin-right: 10px;
+				}
+				&:hover .fa {
+					color: $color_caribbean_green_approx;
+				}
+			}
+		}
+	}
+	.mh-about-tag {
+		width: 60%;
+		margin: 0 auto;
+		ul li {
+			margin: 6px;
+		}
+	}
+}
+.mh-featured-project-img img {
+	width: inherit !important;
+	margin: 0 auto;
+}
+.mh-about .mh-about-inner {
+	padding-left: 50px;
+	h2 {
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	p {
+		margin-bottom: 30px;
+	}
+	.btn {
+		margin-top: 20px;
+		.fa {
+			margin-left: 10px;
+		}
+	}
+}
+.mh-skills .mh-professional-skill {
+	padding-right: 60px;
+	h3 {
+		font-size: 30px;
+		line-height: 40px;
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 60px;
+	}
+}
+.mh-professional-progress li {
+	display: inline-block;
+	margin: 0 auto;
+	float: none;
+	width: 48%;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.progress.progress-line {
+	height: 10px;
+	margin-right: 60px;
+	.progressbar-text {
+		position: absolute;
+		top: 50%;
+		left: 100%;
+		width: 60px;
+		//vendor-prefix found
+		//-webkit-transform: translateY(-35%)
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-35%);
+		text-align: center;
+	}
+}
+.mh-portfolio-modal-img img {
+	margin-bottom: 20px;
+}
+.mh-pricing .mh-pricing {
+	padding: 30px 0;
+	text-align: center;
+	//vendor-prefix found
+	//-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 5px 0 $black_16, 0 2px 10px 0 $black_12;
+	//vendor-prefix found
+	//-webkit-transition: 0.3s
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: 0.3s;
+	margin-bottom: 30px;
+	&:hover {
+		//vendor-prefix found
+		//-webkit-transition: 0.3s
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.3s;
+		.btn {
+			//vendor-prefix found
+			//-webkit-transition: 0.3s
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: 0.3s;
+			background-color: $color_persian_green_approx;
+		}
+	}
+	.fa {
+		font-size: 30px;
+		line-height: 36px;
+		margin-bottom: 20px;
+		color: $color_aquamarine_approx;
+	}
+	h4 {
+		margin-bottom: 10px;
+		margin-top: 20px;
+	}
+	h5 {
+		font-size: 36px;
+		line-height: 40px;
+		color: $color_caribbean_green_approx;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	span {
+		opacity: 0.8;
+	}
+	ul {
+		margin: 30px 0;
+		li {
+			margin: 2px 0;
+		}
+	}
+	.btn {
+		//vendor-prefix found
+		//-webkit-transition: 0.3s
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.3s;
+	}
+}
+.mh-blog .mh-blog-item {
+	//vendor-prefix found
+	//-webkit-transition: 0.3s
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: 0.3s;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 10px 10px 0 0;
+	//vendor-prefix found
+	//-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 5px 0 $black_16, 0 2px 10px 0 $black_12;
+	margin-bottom: 30px;
+	&:hover {
+		//vendor-prefix found
+		//-webkit-transition: 0.3s
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.3s;
+	}
+	.blog-inner {
+		padding: 0 20px;
+		padding-bottom: 30px;
+		a {
+			color: $color_caribbean_green_approx;
+		}
+		h2 a {
+			color: $white;
+		}
+	}
+	img {
+		margin-bottom: 30px;
+	}
+	h2 {
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 600;
+		margin-bottom: 10px;
+		color: $white;
+		a {
+			color: $color_caribbean_green_approx;
+			&:hover {
+				color: $color_caribbean_green_approx;
+			}
+		}
+	}
+	&.blog-single {
+		h2 {
+			font-size: 36px;
+			line-height: 40px;
+			font-weight: bold;
+		}
+		h3 {
+			margin-bottom: 10px;
+		}
+		ul {
+			padding-left: 30px;
+			margin-bottom: 20px;
+			li {
+				list-style-type: circle;
+			}
+		}
+	}
+}
+.mh-video .each-video {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding: 30px 0;
+	p {
+		padding: 0 160px;
+		margin-top: 20px;
+	}
+	.fa {
+		background-color: $white;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		color: $black;
+		height: 40px;
+		width: 40px;
+		margin-top: 20px;
+		line-height: 40px;
+		text-align: center;
+	}
+}
+.mh-quates .each-quates {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	p {
+		margin-top: 20px;
+	}
+	.fa {
+		background-color: $white;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		color: $black;
+		height: 40px;
+		width: 40px;
+		margin-top: 20px;
+		line-height: 40px;
+		text-align: center;
+	}
+}
+.mh-project-gallery .grid-item figure {
+	position: relative;
+	overflow: hidden;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 10px;
+	img {
+		position: relative;
+		width: 100%;
+		display: block;
+	}
+	figcaption {
+		position: absolute;
+		padding: 15px;
+		height: 100%;
+		width: 100%;
+		top: auto;
+		left: 0;
+		color: $white;
+		bottom: 0;
+		z-index: 10;
+		//vendor-prefix found
+		//-webkit-transition: 0.5s
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.5s;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			//vendor-prefix found
+			//-webkit-transition: all 0.4s ease-out
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.4s ease-out;
+			//vendor-prefix found
+			//-webkit-transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(0.95)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(0.95);
+			z-index: -1;
+			opacity: 0;
+		}
+		.fa {
+			margin: 0;
+			padding: 0;
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 35px;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			left: 0;
+			top: 45%;
+			margin-top: -22px;
+			//vendor-prefix found
+			//-webkit-transform: translateX(0px) translateY(0) translateZ(0) rotate(0deg) scale(1)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(0px) translateY(0) translateZ(0) rotate(0deg) scale(1);
+			opacity: 0;
+			letter-spacing: 0;
+		}
+		.title {
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			left: 0;
+			right: 0;
+			font-size: 18px;
+			line-height: 30px;
+			text-transform: capitalize;
+			top: 50%;
+			margin-top: 30px;
+			margin-top: -2px;
+			//vendor-prefix found
+			//-webkit-transform: translateX(80px) translateY(0) translateZ(0) rotate(0deg) scale(1)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(80px) translateY(0) translateZ(0) rotate(0deg) scale(1);
+			//vendor-prefix found
+			//-webkit-transition: all 0.4s ease-out
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.4s ease-out;
+			opacity: 0;
+			letter-spacing: 0;
+		}
+		.sub-title {
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			left: 0;
+			font-size: 13px;
+			top: 50%;
+			margin-top: 30px;
+			//vendor-prefix found
+			//-webkit-transform: translateX(-70px) translateY(0) translateZ(0) rotate(0deg) scale(1)
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateX(-70px) translateY(0) translateZ(0) rotate(0deg) scale(1);
+			//vendor-prefix found
+			//-webkit-transition: 0.5s
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: 0.5s;
+			opacity: 0;
+			letter-spacing: 0;
+		}
+		a {
+			position: absolute;
+			z-index: 1111;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			text-indent: -99999px;
+		}
+	}
+	&:hover {
+		//vendor-prefix found
+		//-webkit-transition: all 0.4s ease-out
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.4s ease-out;
+		figcaption {
+			color: $white;
+			background: $color_caribbean_green_90_approx;
+			&:after {
+				opacity: 1;
+				//vendor-prefix found
+				//-webkit-transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(1)
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(1);
+				//vendor-prefix found
+				//-webkit-transition: all 0.4s ease-out
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all 0.4s ease-out;
+			}
+			.fa {
+				//vendor-prefix found
+				//-webkit-transform: translateX(0px) translateY(0) translateZ(0) rotate(0deg) scale(1)
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateX(0px) translateY(0) translateZ(0) rotate(0deg) scale(1);
+				//vendor-prefix found
+				//-webkit-transition: 0.2s
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: 0.2s;
+				opacity: 1;
+			}
+			.title {
+				//vendor-prefix found
+				//-webkit-transform: translateX(0px) translateY(0) translateZ(0) rotate(0deg) scale(1)
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateX(0px) translateY(0) translateZ(0) rotate(0deg) scale(1);
+				//vendor-prefix found
+				//-webkit-transition: 0.4s
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: 0.4s;
+				opacity: 1;
+			}
+			.sub-title {
+				//vendor-prefix found
+				//-webkit-transform: translateX(0px) translateY(0) translateZ(0) rotate(0deg) scale(1)
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateX(0px) translateY(0) translateZ(0) rotate(0deg) scale(1);
+				//vendor-prefix found
+				//-webkit-transition: 0.6s
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: 0.6s;
+				opacity: 1;
+			}
+		}
+	}
+}
+.mh-featured-project .mh-featured-item {
+	margin: 30px 0;
+	.mh-featured-project-content {
+		.project-category {
+			font-size: 14px;
+			color: $color_caribbean_green_approx;
+			margin-top: 0;
+			margin-bottom: 0;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		h2 {
+			letter-spacing: 2px;
+			margin-top: 12px;
+			margin-bottom: 12px;
+			text-transform: uppercase;
+		}
+		span {
+			text-transform: uppercase;
+		}
+		p {
+			text-align: left;
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+		.mh-testimonial blockquote {
+			padding: 0;
+			margin: 0;
+			margin-top: 30px;
+			q {
+				font-style: italic;
+			}
+			q::before {
+				content: open-quote;
+			}
+			q::after {
+				content: close-quote;
+			}
+			cite {
+				display: block;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 600;
+				margin-top: 10px;
+			}
+		}
+	}
+}
+.mh-single-project-slide .owl-controls {
+	.owl-nav {
+		display: none !important;
+	}
+	.owl-dots {
+		padding-left: 15px;
+		margin-top: 30px;
+		text-align: center;
+		.owl-dot {
+			height: 15px;
+			width: 15px;
+			border: 1px solid $color_caribbean_green_approx;
+			display: inline-block;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 50%;
+			margin-right: 10px;
+			&.active {
+				background-color: $color_caribbean_green_approx;
+			}
+		}
+	}
+}
+.mh-service .mh-service-item {
+	padding: 20px;
+	.fa {
+		font-size: 30px;
+		margin-bottom: 20px;
+		margin-top: 16px;
+		&.purple-color {
+			color: $color_medium_purple_approx;
+		}
+		&.iron-color {
+			color: $color_burnt_sienna_approx;
+		}
+		&.sky-color {
+			color: $color_curious_blue_approx;
+		}
+	}
+	h3 {
+		margin-bottom: 18px;
+		font-size: 25px;
+		line-height: 34px;
+	}
+	a {
+		color: $color_caribbean_green_approx;
+		.fa {
+			font-size: 16px;
+			line-height: 27px;
+			margin-left: 6px;
+		}
+	}
+}
+.mh-blog-insta ul li {
+	width: 48%;
+	display: inline-block;
+	margin-bottom: 10px;
+	img {
+		padding-right: 4px;
+	}
+}
+.mh-blog-next-prev-post a {
+	color: $color_caribbean_green_approx;
+	.fa {
+		margin: 0 4px;
+	}
+}
+.comment-deatils span {
+	color: $color_caribbean_green_approx;
+}
+.navbar-nav li {
+	margin: 0 20px;
+	a {
+		border-bottom: 1px solid transparent;
+		font-weight: bold;
+		font-family: $font_0, $font_1;
+		font-size: 18px;
+		opacity: 1;
+		line-height: 30px;
+		&.nav-link {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		&:hover {
+			color: $color_caribbean_green_approx;
+		}
+	}
+}
