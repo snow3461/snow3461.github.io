@@ -62,9 +62,9 @@ a {
     outline: 0 !important;
   }
 }
-section{
-  margin: 20px 20px 20px 20px;
-}
+// section{
+//   margin: 20px 20px 20px 20px;
+// }
 
 // loader animation
 .section-loader {
@@ -291,4 +291,7 @@ section{
     padding-top: 10px;
     padding-bottom: 10px;
   }
+}
+.section-separator {
+  padding: 20px 20px 20px 20px;
 }
