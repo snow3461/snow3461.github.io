@@ -274,6 +274,18 @@ a:focus {
   padding: 20px 20px 20px 20px;
 }
 
+.dev-icons {
+  font-size: 3rem;
+}
+
+.dev-icons .list-inline-item i:hover {
+  color: #bd5d38;
+}
+
+.footer {
+  background-color: rgba(184, 178, 178, 0.568);
+}
+
 @keyframes loader {
   0% {
     top: 94px;
