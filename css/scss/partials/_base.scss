@@ -130,9 +130,9 @@ a {
   border-bottom: 1px solid transparent;
   box-shadow: 0 1px 0.5px rgba(184, 178, 178, 0.568);
   z-index: 1030;
-  &.nav-strict{
+  &.nav-strict {
     background-color: white;
-  box-shadow: 0 2px 1px rgba(88, 85, 85, 0.582);
+    box-shadow: 0 2px 1px rgba(88, 85, 85, 0.582);
     .navbar-padding {
       padding-top: 15px;
       padding-bottom: 15px;
@@ -174,7 +174,7 @@ a {
   background-repeat: no-repeat;
   margin: 0 auto;
   background-position: center center;
-  background-color: rgba(255, 255, 255, 0.70);
+  background-color: rgba(255, 255, 255, 0.7);
   // height: 400px; //for debugging only
 }
 .home-section {
@@ -226,14 +226,14 @@ a {
         }
         .fa {
           font-size: 32pt;
-            line-height: 30px;
-            padding: 4px 14px;
-            margin-right: 10px;
-            -moz-transition: 0.3s;
-            -o-transition: 0.3s;
-            -webkit-transition: 0.3s;
-            transition: 0.3s;
-            border-radius: 3px;
+          line-height: 30px;
+          padding: 4px 14px;
+          margin-right: 10px;
+          -moz-transition: 0.3s;
+          -o-transition: 0.3s;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          border-radius: 3px;
         }
       }
     }
@@ -255,27 +255,26 @@ a {
     }
   }
   .img-portrait {
-      img {
-          border: 20px solid rgba(0, 0, 0, 0.17);
-          border-radius: 50%;
-      }
-      .img-border {
-          // height: 400px;
-          width: 400px;
-          border: 20px solid rgba(0, 0, 0, 0.07);
-          border-radius: 50%;
-      }
+    img {
+      border: 20px solid rgba(0, 0, 0, 0.17);
+      border-radius: 50%;
+    }
+    .img-border {
+      // height: 400px;
+      width: 400px;
+      border: 20px solid rgba(0, 0, 0, 0.07);
+      border-radius: 50%;
+    }
   }
 }
-.aboutme-section{
+.aboutme-section {
   // padding: 50px 20px 0 20px;
   h2 {
     text-align: center;
   }
-  
 }
-.skills-section{
-  h2{
+.skills-section {
+  h2 {
     text-align: center;
     //width: 100%;
     //margin: auto;
@@ -284,7 +283,7 @@ a {
     font-size: 14pt;
     color: rgba(27, 27, 27, 0.746);
   }
-  .progress{
+  .progress {
     border-radius: 20px;
   }
   .skills-padding {
@@ -294,4 +293,15 @@ a {
 }
 .section-separator {
   padding: 20px 20px 20px 20px;
+}
+
+.dev-icons {
+  font-size: 3rem;
+  .list-inline-item i:hover {
+    color: #bd5d38;
+  }
+}
+
+.footer {
+  background-color: rgba(184, 178, 178, 0.568);
 }
