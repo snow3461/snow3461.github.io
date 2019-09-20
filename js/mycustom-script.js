@@ -41,7 +41,6 @@ $(document).ready(
     var wow = new WOW({
       boxClass: "wow",
       animateClass: "animated",
-      offset: 60,
       mobile: true // trigger animations on mobile devices (default is true)
     });
     wow.init();

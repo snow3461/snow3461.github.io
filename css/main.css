@@ -282,8 +282,16 @@ a:focus {
   color: #bd5d38;
 }
 
+.dev-icons li.list-inline-item {
+  margin: 0.5rem 0.5rem;
+}
+
 .footer {
   background-color: rgba(184, 178, 178, 0.568);
+}
+
+.footer span {
+  min-height: 2 rem;
 }
 
 @keyframes loader {
