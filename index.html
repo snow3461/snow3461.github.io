@@ -51,7 +51,8 @@
     <header>
       <!-- <div class="container"> -->
       <nav
-        class="navbar navbar-expand-md navbar-light navbar-padding">
+        class="navbar navbar-expand-md navbar-light navbar-padding"
+        id="topNav">
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button"
           data-toggle="collapse"
@@ -65,14 +66,16 @@
           id="collapsibleNavbar">
           <ul id="main-navbar" class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link js-scroll-trigger"
+                href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#aboutme">A propos
+              <a class="nav-link js-scroll-trigger"
+                href="#aboutme">A propos
                 de moi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"
+              <a class="nav-link js-scroll-trigger"
                 href="#skills">Compétences</a>
             </li>
           </ul>
@@ -325,19 +328,15 @@
     ------------------------------------------------------
     -->
 
-  <script src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
   <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
+    src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
   <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <!-- jquery nav -->
-  <script src="plugins/js/jquery.nav.js"></script>
+    src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
   <!-- wow -->
   <script src="plugins/js/wow.js"></script>
   <!-- Custom Scripts-->
