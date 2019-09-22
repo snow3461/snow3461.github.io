@@ -12,18 +12,16 @@
     href="https://fonts.googleapis.com/css?family=Roboto" />
   <!-- Font Awesome -->
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    href="vendor/fontawesome-free/css/all.min.css" />
   <!-- DEV ICons -->
   <link rel=" stylesheet"
     href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous" />
+    href="vendor/bootstrap/css/bootstrap.min.css"/>
   <!-- Animate CSS-->
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    href="vendor/animate/animate.min.css" />
   <!-- Custom CSS-->
   <link rel="stylesheet" href="css/main.css" />
 </head>
@@ -42,59 +40,51 @@
   </div>
   <!-- End Loader -->
   <!---
-      ====================================
-      NAVIGATION BAR
-      ====================================
-      -->
-  <div class="container-fluid custom-header nav-scroll"
-    style="position: fixed;">
-    <header>
-      <!-- <div class="container"> -->
-      <nav
-        class="navbar navbar-expand-md navbar-light navbar-padding"
-        id="topNav">
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button"
-          data-toggle="collapse"
-          data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    ====================================
+    NAVIGATION BAR
+    ====================================
+  -->
+  <div class="container-fluid">
+    <nav
+      class="nav-scroll navbar navbar-expand-md sticky-top navbar-light navbar-padding"
+      id="topNav">
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- Navbar links -->
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="collapsibleNavbar">
-          <ul id="main-navbar" class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link js-scroll-trigger"
-                href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger"
-                href="#aboutme">A propos
-                de moi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger"
-                href="#skills">Compétences</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!-- </div> -->
-    </header>
-  </div>
-
-  <!--========================
+      <!-- Navbar links -->
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="collapsibleNavbar">
+        <ul id="main-navbar" class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link js-scroll-trigger"
+              href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger"
+              href="#aboutme">A propos
+              de moi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger"
+              href="#skills">Compétences</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--========================
 =========HOME SECTION=========
 ===========================--->
 
-  <section id="home" class="home-section home-img">
-    <div class="img-overlay">
-      <div class="container">
+    <section id="home" class="home-section home-img">
+      <div class="img-overlay">
         <div
           class="row home-row-padding align-items-center">
-          <div class="col-sm-6 home-col order-sm-12">
+          <div class="col-sm-6  order-sm-12">
             <div
               class="d-flex justify-content-center img-portrait wow fadeInUp"
               data-wow-duration="0.8s" data-wow-delay="0.6s"
@@ -107,7 +97,8 @@
           </div>
           <div class="col-sm-6 home-col order-sm-1">
             <!-- create a flex container for centering -->
-            <div class="d-flex justify-content-center">
+            <div
+              class="d-flex justify-content-center flex-nowrap">
               <div class="header-info pt-3 pt-sm-0">
                 <!---add padding when small, remove it on bigger.-->
                 <div class="promo wow fadeInUp"
@@ -172,14 +163,12 @@
             </div>
           </div>
         </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="aboutme" class="aboutme-section">
-    <div class="container">
-
-      <div class="row section-separator">
+    <section id="aboutme" class="aboutme-section">
+      <div class="row section-separator aboutme-padding">
         <div class="col text-justify">
           <h2 class="wow fadeInUp" data-wow-duration="0.8s"
             data-wow-delay="0.1s"
@@ -189,21 +178,29 @@
           <p>
             J'ai 31 ans.
             Je suis un passioné de sciences, et
-            d'informatique. J'ai concrétisé ma passion pour
+            d'informatique. J'ai concrétisé ma passion
+            pour
             les sciences par le biais de mes études. J'ai
             toujours voulu comprendre comment fonctionnait
-            les choses, de quoi était constitué la matière,
-            et comprendre la magie de la réaction chimique.
-            , j'ai donc fait des études dans ce sens et suis
-            devenu ingénieur chimiste spécialité matériaux.
+            les choses, de quoi était constitué la
+            matière,
+            et comprendre la magie de la réaction
+            chimique.
+            , j'ai donc fait des études dans ce sens et
+            suis
+            devenu ingénieur chimiste spécialité
+            matériaux.
             <p>
               Ma seconde passion, l'informatique, au début
               un hobby, s'est révélée ces dernières années
               de plus en plus intense.
-              Cela s'est manifesté particulièrement pendant
-              ma dernière expérience professionnelle : j'ai
+              Cela s'est manifesté particulièrement
+              pendant
+              ma dernière expérience professionnelle :
+              j'ai
               développé, par envie plus que par réelle
-              nécessité, un programme en langage MatLab pour
+              nécessité, un programme en langage MatLab
+              pour
               traiter les grosses quantités d'images
               générées pas mes expériences scientifique.
               J'ai ressenti une satisfaction particulière
@@ -216,10 +213,12 @@
             </p>
           </p>
           <p>
-            Pour cela, je termine actuellement une formation
+            Pour cela, je termine actuellement une
+            formation
             dispensée par le centre de formation M2i. Au
             cours de cette formation, j'ai pu parfaire mes
-            connaissances en algorithmie, découvert la POO,
+            connaissances en algorithmie, découvert la
+            POO,
             quelques desgin patterns...
             Ces nouvelles connaissances ont été mises en
             pratique au travers de projets fil-rouge.
@@ -228,94 +227,98 @@
             Fort de mes expériences précédentes, de ma
             curiosité aigue, je suis capable de monter en
             compétences très rapidement.
-            Je souhaite travailler en étroite collaboration
+            Je souhaite travailler en étroite
+            collaboration
             avec les membres d'une équipe.
           </p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section id="skills" class="skills-section">
-    <div class="w-100">
-      <h2 class="mb-5 wow fadeInUp"
-        style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.1s; animation-name: fadeInUp;">
-        Compétences</h2>
-      <div class="container text-center">
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-            <i class="devicon-dot-net-plain-wordmark"
-              data-toggle="tooltip" data-placement="top"
-              title=".NET Framework"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-csharp-plain-wordmark"
-              data-toggle="tooltip" data-placement="top"
-              title="C #"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-html5-plain-wordmark"
-              data-toggle="tooltip" data-placement="top"
-              title="HTML5"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-css3-plain-wordmark"
-              data-toggle="tooltip" data-placement="top"
-              title="CSS3"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-bootstrap"
-              data-toggle="tooltip" data-placement="top"
-              title="Bootstrap"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-javascript-plain"
-              data-toggle="tooltip" data-placement="top"
-              title="JavaScript"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-jquery-plain-wordmark"
-              data-toggle="tooltip" data-placement="top"
-              title="jQuery"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-node-js" data-toggle="tooltip"
-              data-placement="top" title="NodeJS"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-npm" data-toggle="tooltip"
-              data-placement="top" title="npm"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-angular" data-toggle="tooltip"
-              data-placement="top" title="Angular"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-git-plain"
-              data-toggle="tooltip" data-placement="top"
-              title="Git"></i>
-          </li>
+    </section>
+
+    <section id="skills" class="skills-section">
+      <div class="w-100">
+        <h2 class="mb-5 wow fadeInUp"
+          style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.1s; animation-name: fadeInUp;">
+          Compétences</h2>
+        <div class="container text-center">
+          <ul class="list-inline dev-icons">
+            <li class="list-inline-item">
+              <i class="devicon-dot-net-plain-wordmark"
+                data-toggle="tooltip" data-placement="top"
+                title=".NET Framework"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-csharp-plain-wordmark"
+                data-toggle="tooltip" data-placement="top"
+                title="C #"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-html5-plain-wordmark"
+                data-toggle="tooltip" data-placement="top"
+                title="HTML5"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-css3-plain-wordmark"
+                data-toggle="tooltip" data-placement="top"
+                title="CSS3"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="fab fa-bootstrap"
+                data-toggle="tooltip" data-placement="top"
+                title="Bootstrap"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-javascript-plain"
+                data-toggle="tooltip" data-placement="top"
+                title="JavaScript"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-jquery-plain-wordmark"
+                data-toggle="tooltip" data-placement="top"
+                title="jQuery"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="fab fa-node-js"
+                data-toggle="tooltip" data-placement="top"
+                title="NodeJS"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="fab fa-npm" data-toggle="tooltip"
+                data-placement="top" title="npm"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="fab fa-angular"
+                data-toggle="tooltip" data-placement="top"
+                title="Angular"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-git-plain"
+                data-toggle="tooltip" data-placement="top"
+                title="Git"></i>
+            </li>
 
 
-          <li class="list-inline-item">
-            <i class="devicon-docker-plain-wordmark"
-              data-toggle="tooltip" data-placement="top"
-              title="Docker"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class=" devicon-linux-plain"
-              data-toggle="tooltip" data-placement="top"
-              title="GNU/Linux"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-debian-plain-wordmark"
-              data-toggle="tooltip" data-placement="top"
-              title="Debian"></i>
-          </li>
-        </ul>
+            <li class="list-inline-item">
+              <i class="devicon-docker-plain-wordmark"
+                data-toggle="tooltip" data-placement="top"
+                title="Docker"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class=" devicon-linux-plain"
+                data-toggle="tooltip" data-placement="top"
+                title="GNU/Linux"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-debian-plain-wordmark"
+                data-toggle="tooltip" data-placement="top"
+                title="Debian"></i>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <footer class="footer">
     <div class="container">
@@ -338,7 +341,7 @@
     src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- wow -->
-  <script src="plugins/js/wow.js"></script>
+  <script src="vendor/wow/wow.min.js"></script>
   <!-- Custom Scripts-->
   <!-- <script src="assets/js/map-init.js"></script> -->
   <script src="js/mycustom-script.js"></script>
