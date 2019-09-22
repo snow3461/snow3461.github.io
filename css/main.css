@@ -172,10 +172,6 @@ a:focus {
   border-bottom-right-radius: 20px;
 }
 
-#collapsibleNavbar.show {
-  background-color: white;
-}
-
 .home-section .home-row-padding {
   padding: 3rem 3rem;
 }
